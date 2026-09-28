@@ -1,0 +1,1 @@
+export default function NotFound() { return <main id="main" className="wrap section"><p className="eyebrow">404 / NO BOX HERE</p><h1>That one isn’t<br/>in the lineup.</h1><a className="action" href="/#boxes">Meet the four boxes ↗</a></main> }
