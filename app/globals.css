@@ -12,3 +12,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.will-reveal{opacity:1;transform:none}[data-rotate]{transform:none!important}}
 
 .comparison-scroll{overflow-x:auto;scrollbar-color:#9cbae6 #f4f7fb}.comparison [data-slot=table-container]{overflow:visible}.enclosure-detail .exterior-window{transform:scale(1.5)}.gallery [data-slot=tabs-list]{flex-wrap:wrap;gap:16px;justify-content:center}
+.brand-logo{display:block;width:54px;height:54px;object-fit:contain;mix-blend-mode:multiply;flex:none}
