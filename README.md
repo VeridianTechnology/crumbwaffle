@@ -45,3 +45,4 @@ The waitlist form validates an email locally and displays an honest demo respons
 ## Validation
 
 Production compilation, TypeScript, and HTTP route/content checks are used. Browser visual/interaction QA was not performed. The site is primarily a reading/navigation experience; no WebMCP action surface is necessary for its non-submitting prototype form.
+# crumbwaffle
