@@ -11,6 +11,7 @@ const { d1, r2 } = hostingConfig;
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
+const isStaticExport = process.env.CRUMBWAFFLE_STATIC_EXPORT === '1';
 
 const localBindingConfig = {
   main: 'vinext/server/fetch-handler',
@@ -35,6 +36,13 @@ const localBindingConfig = {
 };
 
 export default defineConfig(async () => {
+  if (isStaticExport) {
+    return {
+      css: { postcss: { plugins: [tailwindcss()] } },
+      plugins: [vinext()],
+    };
+  }
+
   // Keep Wrangler and Miniflare state project-local. These are non-secret tool
   // settings; application environment belongs in ignored `.env*` files.
   process.env.WRANGLER_WRITE_LOGS ??= 'false';
